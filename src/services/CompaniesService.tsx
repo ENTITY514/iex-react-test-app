@@ -35,6 +35,11 @@ export const CompaniesApi = createApi({
                 url: `/stable/stock/aapl/logo?token=${api_token}`
             })
         }),
+        fetchCompanyFinancial: build.query<ICompanyLogo, string>({
+            query: () => ({
+                url: `/stable/time-series/reported_financials/XNYS/IBM/10-K/A?q=2021&token=${api_token}`
+            })
+        }),
         fetchFinancial: build.query<ICompany, string>({
             query: () => ({
                 url: `/stable/stock/aapl/financials?token=${api_token}`

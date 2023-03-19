@@ -1,0 +1,12 @@
+.container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--bg-boxs-color);
+    border-radius: var(--standart-border-radius-min);
+}
+
+.image_wrapper {
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,42 @@
+html {
+    --standart-border-radius-min: 10px;
+    --standart-border-radius-mid: 20px;
+    --standart-border-radius-max: 30px;
+    --standart-padding-min: 10px;
+    --standart-padding-mid: 20px;
+    --standart-padding-max: 30px;
+    --standart-margin-min: 10px;
+    --standart-margin-mid: 20px;
+    --standart-margin-max: 30px;
+    --standart-border-width: 2px;
+    --standart-border-width-input: 1px;
+    --standart-transition-time: 1s;
+    --standart-fast-transition-time: 0.3s;
+}
+
+html[data-theme="dark"] {
+    --bg-color: rgb(49, 49, 49);
+    --bg-boxs-color: rgb(31, 31, 31);
+    --bg-second-boxs-color: rgb(45, 45, 45);
+    --bg-button-color: rgb(0, 0, 0);
+    --text-color: rgb(255, 255, 155);
+    --link-text-color: rgb(1, 247, 255);
+    --border-color: rgb(255, 255, 155);
+}
+
+html[data-theme="light"] {
+    --bg-color: rgb(255, 255, 255);
+    --bg-boxs-color: rgba(117, 117, 117, 0.7);
+    --bg-second-boxs-color: rgb(73, 73, 73);
+    --text-color: rgb(0, 0, 0);
+    --border-color: rgb(94, 94, 94);
+    --text-color: rgb(0, 0, 0);
+    --link-text-color: rgb(64, 249, 255);
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    background-color: var(--bg-color);
+}

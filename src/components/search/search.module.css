@@ -1,0 +1,6 @@
+.container {
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-second-boxs-color);
+}
