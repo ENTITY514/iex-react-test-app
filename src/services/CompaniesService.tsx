@@ -16,33 +16,28 @@ export const CompaniesApi = createApi({
             })
         }),
         fetchCompanyData: build.query<ICompanyData, string>({
-            query: () => ({
-                url: `/stable/stock/aapl/company?token=${api_token}`
+            query: (company_name) => ({
+                url: `/stable/stock/${company_name}/company?token=${api_token}`
             })
         }),
-        fetchCompanyStats: build.query<CompanyStockQuote, string>({
-            query: () => ({
-                url: `/v1/data/CORE/QUOTE/TWTR?token=${api_token}`
+        fetchCompanyStats: build.query<Array<CompanyStockQuote>, string>({
+            query: (company_name) => ({
+                url: `/v1/data/CORE/QUOTE/${company_name}?token=${api_token}`
             })
         }),
         fetchCompaniesCollection: build.query<CompanyStockQuote[], string>({
+            query: (collectionName) => ({
+                url: `/stable/stock/market/collection/tag?tagName=${collectionName}&token=${api_token}`
+            })
+        }),
+        fetchTags: build.query<CompanyStockQuote[], string>({
             query: () => ({
-                url: `/v1/data/CORE/STOCK_COLLECTION/list?collectionName=mostactive&token=${api_token}`
+                url: `https://api.iex.cloud/v1/data/CORE/REF_DATA_TAGS?token=${api_token}`
             })
         }),
         fetchCompanyLogo: build.query<ICompanyLogo, string>({
-            query: () => ({
-                url: `/stable/stock/aapl/logo?token=${api_token}`
-            })
-        }),
-        fetchCompanyFinancial: build.query<ICompanyLogo, string>({
-            query: () => ({
-                url: `/stable/time-series/reported_financials/XNYS/IBM/10-K/A?q=2021&token=${api_token}`
-            })
-        }),
-        fetchFinancial: build.query<ICompany, string>({
-            query: () => ({
-                url: `/stable/stock/aapl/financials?token=${api_token}`
+            query: (company_name) => ({
+                url: `/stable/stock/${company_name}/logo?token=${api_token}`
             })
         })
     })

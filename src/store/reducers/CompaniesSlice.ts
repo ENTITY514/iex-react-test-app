@@ -1,14 +1,19 @@
 import { Action, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IData } from "../models/ICompanies";
+import { ICompany } from "../../models/company";
+import { Icompanies } from "../models/ICompanies";
 
-let initialState: IData = {
+let initialState: Icompanies = {
+    companies: []
 }
 
-export const dataSlice = createSlice({
+export const companiesSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
+        setCompanies: (state, action: PayloadAction<Array<ICompany>>) => {
+            state.companies = action.payload
+        }
     }
 })
 
-export default dataSlice.reducer;
+export default companiesSlice.reducer;

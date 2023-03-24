@@ -1,0 +1,19 @@
+.box {
+    width: 80%;
+    margin: var(--standart-margin-min) auto;
+    padding: var(--standart-padding-mid);
+    border-radius: var(--standart-border-radius-mid);
+}
+
+.text{
+    font-size: 1.2em;
+}
+
+@media (max-width: 1500px) {
+    .box {
+        width: 100%;
+        margin: var(--standart-margin-min) auto;
+        padding: var(--standart-padding-mid);
+        border-radius: var(--standart-border-radius-mid);
+    }
+}

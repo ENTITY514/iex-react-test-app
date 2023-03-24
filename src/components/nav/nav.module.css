@@ -1,11 +1,17 @@
 .container {
     display: flex;
     align-content: center;
+    gap: 20px;
 }
 
 .link {
     font-size: large;
     font-weight: bold;
-    margin: var(--standart-margin-min);
     color: var(--link-text-color);
+}
+
+.link_active {
+    font-size: large;
+    font-weight: bold;
+    color: var(--text-color);
 }

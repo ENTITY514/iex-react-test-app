@@ -15,23 +15,29 @@ html {
 }
 
 html[data-theme="dark"] {
-    --bg-color: rgb(49, 49, 49);
-    --bg-boxs-color: rgb(31, 31, 31);
-    --bg-second-boxs-color: rgb(45, 45, 45);
-    --bg-button-color: rgb(0, 0, 0);
-    --text-color: rgb(255, 255, 155);
-    --link-text-color: rgb(1, 247, 255);
-    --border-color: rgb(255, 255, 155);
+    --bg-color: rgb(40, 40, 40);
+    --bg-boxs-color: rgb(50, 50, 50);
+    --bg-second-boxs-color: rgb(55, 55, 55);
+    --bg-box-gradient: linear-gradient(145deg, #525151, #2e2e2e);
+    --box-shadow-little: 10px 10px 20px #1b1b1b, -10px -10px 20px #414141;
+    --box-shadow-medium: 15px 15px 30px #1f1f1f, -15px -15px 30px #3a3a3a;
+    --box-shadow-big: 20px 20px 40px #1f1f1f, -20px -20px 40px #3a3a3a;
+    --text-color: rgb(255, 255, 255);
+    --border-color: rgb(94, 94, 94);
+    --link-text-color: rgb(64, 249, 255);
 }
 
 html[data-theme="light"] {
-    --bg-color: rgb(255, 255, 255);
-    --bg-boxs-color: rgba(117, 117, 117, 0.7);
-    --bg-second-boxs-color: rgb(73, 73, 73);
-    --text-color: rgb(0, 0, 0);
+    --bg-color: rgb(230, 230, 230);
+    --bg-boxs-color: rgba(245, 245, 245);
+    --bg-second-boxs-color: rgb(240, 240, 240);
+    --bg-box-gradient: linear-gradient(145deg, rgb(240, 240, 240), rgb(210, 210, 210));
+    --box-shadow-little: 10px 10px 20px #868686, -10px -10px 20px #ffffff;
+    --box-shadow-medium: 15px 15px 30px #868686, -15px -15px 30px #ffffff;
+    --box-shadow-big: 20px 20px 40px #868686, -20px -20px 40px #ffffff;
+    --text-color: rgb(56, 56, 56);
     --border-color: rgb(94, 94, 94);
-    --text-color: rgb(0, 0, 0);
-    --link-text-color: rgb(64, 249, 255);
+    --link-text-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -39,4 +45,5 @@ html[data-theme="light"] {
     min-height: 100vh;
     display: grid;
     background-color: var(--bg-color);
+    color:var(--text-color)
 }

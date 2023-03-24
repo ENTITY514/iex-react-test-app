@@ -2,8 +2,22 @@
     width: 100%;
     height: 100px;
     background-color: var(--bg-boxs-color);
+    box-shadow: var(--box-shadow-little);
     display: grid;
     align-content: center;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 50px 30px;
+    grid-template-columns: 200px 1fr;
+    justify-items: center;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: var(--standart-padding-max);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0;
+        padding-left: var(--standart-padding-max);
+        justify-items: left;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }

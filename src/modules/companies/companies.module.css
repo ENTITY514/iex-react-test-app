@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.list {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttons_box {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--standart-padding-min);
+    padding: var(--standart-padding-mid);
+    margin: auto;
+}
+
+
+@media (max-width: 1600px) {
+    .list {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1500px) {
+    .list {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
