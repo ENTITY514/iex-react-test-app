@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import style from "./app.module.css"
 import { About } from './pages/About/about';
 import { CompaniesPage } from './pages/Companies/companies_page';
-import { Company } from './pages/Company/company';
+import { CompanyPage } from './pages/Company/company_page';
 import { Root } from './pages/Root/root';
 import { CompaniesApi } from './services/CompaniesService';
 import { useAppDispatch } from './store/hooks/redux';
@@ -22,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={""} element={<Root />} />
-          <Route path={"company"} element={<Company />} />
+          <Route path={"company"} element={<CompanyPage />} />
           <Route path={"companies"} element={<CompaniesPage />} />
           <Route path={"about"} element={<About />} />
         </Routes>

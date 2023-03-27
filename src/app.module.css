@@ -19,6 +19,7 @@ html[data-theme="dark"] {
     --bg-boxs-color: rgb(50, 50, 50);
     --bg-second-boxs-color: rgb(55, 55, 55);
     --bg-box-gradient: linear-gradient(145deg, #525151, #2e2e2e);
+    --box-shadow-very-little: 5px 5px 10px #1b1b1b, -5px -5px 10px #414141;
     --box-shadow-little: 10px 10px 20px #1b1b1b, -10px -10px 20px #414141;
     --box-shadow-medium: 15px 15px 30px #1f1f1f, -15px -15px 30px #3a3a3a;
     --box-shadow-big: 20px 20px 40px #1f1f1f, -20px -20px 40px #3a3a3a;
@@ -32,6 +33,7 @@ html[data-theme="light"] {
     --bg-boxs-color: rgba(245, 245, 245);
     --bg-second-boxs-color: rgb(240, 240, 240);
     --bg-box-gradient: linear-gradient(145deg, rgb(240, 240, 240), rgb(210, 210, 210));
+    --box-shadow-very-little: 5px 5px 10px #868686, -5px -5px 10px #ffffff;
     --box-shadow-little: 10px 10px 20px #868686, -10px -10px 20px #ffffff;
     --box-shadow-medium: 15px 15px 30px #868686, -15px -15px 30px #ffffff;
     --box-shadow-big: 20px 20px 40px #868686, -20px -20px 40px #ffffff;
@@ -45,5 +47,9 @@ html[data-theme="light"] {
     min-height: 100vh;
     display: grid;
     background-color: var(--bg-color);
-    color:var(--text-color)
+    color:var(--text-color);
+}
+
+a{
+    color: var(--link-text-color);
 }

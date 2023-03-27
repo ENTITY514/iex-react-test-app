@@ -3,7 +3,8 @@ import { ICompany } from "../../models/company";
 import { Icompanies } from "../models/ICompanies";
 
 let initialState: Icompanies = {
-    companies: []
+    companies: [],
+    active_company: ""
 }
 
 export const companiesSlice = createSlice({
@@ -12,6 +13,9 @@ export const companiesSlice = createSlice({
     reducers: {
         setCompanies: (state, action: PayloadAction<Array<ICompany>>) => {
             state.companies = action.payload
+        },
+        setActiveCompany: (state, action: PayloadAction<string>) => {
+            state.active_company = action.payload
         }
     }
 })

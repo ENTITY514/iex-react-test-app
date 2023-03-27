@@ -1,9 +1,8 @@
-import { ICompany } from "../../models/company"
-import { CompanyStockQuote } from "../../models/companyStockQuote"
-import { CompaniesApi } from "../../services/CompaniesService"
-import { ImageUI } from "../../UI/Image/image"
-import { Title } from "../../UI/title/title"
-import { Loader } from "../loader/loader"
+import { ICompany } from "../../../../../models/company"
+import { CompanyStockQuote } from "../../../../../models/companyStockQuote"
+import { CompaniesApi } from "../../../../../services/CompaniesService"
+import { ImageUI } from "../../../../../UI/Image/image"
+import { Title } from "../../../../../UI/title/title"
 import style from "./company_info.module.css"
 
 interface ICompanyInfoProps {

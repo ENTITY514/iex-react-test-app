@@ -1,7 +1,7 @@
-import { useAppSelector, useAppDispatch } from "../../store/hooks/redux"
-import { THEME } from "../../store/models/ISettings"
-import { settingsSlice } from "../../store/reducers/settingsSlice"
-import { Toogle } from "../../UI/toogle_input/toogle_input"
+import { useAppSelector, useAppDispatch } from "../../../store/hooks/redux"
+import { THEME } from "../../../store/models/ISettings"
+import { settingsSlice } from "../../../store/reducers/settingsSlice"
+import { Toogle } from "../../../UI/toogle_input/toogle_input"
 import style from "./toggle_theme.module.css"
 
 

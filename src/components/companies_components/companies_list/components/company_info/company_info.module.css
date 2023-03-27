@@ -8,7 +8,7 @@
     background: var(--bg-box-gradient);
     border-radius: var(--standart-border-radius-min);
     box-shadow: var(--box-shadow-little);
-    margin: var(--standart-margin-max);
+    margin: var(--standart-margin-max) auto;
 }
 
 .image_wrapper {
@@ -29,7 +29,7 @@
     background: var(--bg-box-gradient);
     border-radius: var(--standart-border-radius-min);
     box-shadow: var(--box-shadow-little);
-    margin: var(--standart-margin-max);
+    margin: var(--standart-margin-max) auto;
     transition: 0.1s;
 }
 

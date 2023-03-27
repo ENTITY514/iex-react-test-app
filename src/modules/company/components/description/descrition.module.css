@@ -1,0 +1,6 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--standart-margin-min);
+    margin: var(--standart-margin-min) 0;
+}

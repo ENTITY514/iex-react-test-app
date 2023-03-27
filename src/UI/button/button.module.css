@@ -2,7 +2,7 @@
     color: var(--text-color);
     border-radius: var(--standart-border-radius-min);
     background: var(--bg-boxs-color);
-    box-shadow: var(--box-shadow-little);
+    box-shadow: var(--box-shadow-very-little);
     padding: 5px;
     text-align: center;
 }

@@ -5,7 +5,7 @@
     box-shadow: var(--box-shadow-little);
     display: grid;
     align-content: center;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 220px 1fr;
     justify-items: center;
     margin-bottom: 50px;
     align-items: center;
@@ -15,6 +15,7 @@
 @media (max-width: 600px) {
     .container {
         padding: 0;
+        grid-template-columns: 200px 1fr;
         padding-left: var(--standart-padding-max);
         justify-items: left;
         grid-template-columns: 1fr;

@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+}
+
+.about {
+    margin: auto;
+    padding: var(--standart-padding-max);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--standart-margin-min);
+}
+
+.link {
+    margin: var(--standart-margin-min);
+}

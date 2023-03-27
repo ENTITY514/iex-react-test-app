@@ -1,0 +1,31 @@
+.container {
+    background-color: var(--bg-boxs-color);
+    box-shadow: var(--box-shadow-little);
+    display: grid;
+    padding: var(--standart-padding-max);
+    width: 90%;
+    margin: auto;
+    margin-bottom: var(--standart-margin-max);
+    border-radius: var(--standart-border-radius-mid);
+}
+
+.image_wrapper {
+    widows: 200px;
+    height: 200px;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: var(--standart-margin-max);
+    justify-items: center;
+}
+
+
+@media (max-width: 500px) {
+    .box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: var(--standart-margin-max);
+    }
+}
