@@ -18,7 +18,6 @@
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-gap: var(--standart-margin-max);
-    justify-items: center;
 }
 
 
@@ -26,6 +25,7 @@
     .box{
         display: grid;
         grid-template-columns: 1fr;
+        justify-items: center;
         grid-gap: var(--standart-margin-max);
     }
 }
