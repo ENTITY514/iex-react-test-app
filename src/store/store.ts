@@ -1,10 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { CompaniesApi } from "../services/CompaniesService";
-import companiesSlice from "./reducers/CompaniesSlice";
 import settingSlice from "./reducers/settingsSlice";
 
 const rootReducers = combineReducers({
-    companiesSlice,
     settingSlice,
     [CompaniesApi.reducerPath]: CompaniesApi.reducer
 })

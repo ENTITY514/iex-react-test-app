@@ -1,12 +1,14 @@
 import { CompaniesApi } from "../../../../services/CompaniesService"
-import { useAppSelector } from "../../../../store/hooks/redux"
 import { ImageUI } from "../../../../UI/Image/image"
 import { Loader } from "../../../../UI/loader/loader"
 import style from "./logo.module.css"
 
-export const Logo: React.FC = () => {
-    const state = useAppSelector(state => state.companiesSlice)
-    const { data: logo, isLoading, error, refetch } = CompaniesApi.useFetchCompanyLogoQuery(state.active_company)
+interface ILogoProps {
+    company_symbol: string
+}
+
+export const Logo: React.FC<ILogoProps> = ({company_symbol}) => {
+    const { data: logo, isLoading, error, refetch } = CompaniesApi.useFetchCompanyLogoQuery(company_symbol)
     if (logo) {
         return (
             <div className={style.container}>

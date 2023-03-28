@@ -2,30 +2,29 @@ import React from "react"
 import { CompaniesList } from "../../components/companies_components/companies_list/companies_list"
 import { Loader } from "../../UI/loader/loader"
 import { CompaniesApi } from "../../services/CompaniesService"
-import { useAppDispatch, useAppSelector } from "../../store/hooks/redux"
 import { Button } from "../../UI/button/button"
 import style from "./companies.module.css"
 import { useNavigate } from "react-router-dom"
-import { companiesSlice } from "../../store/reducers/CompaniesSlice"
 
 
 export const Companies: React.FC = () => {
     const navigate = useNavigate()
-    const dispatch = useAppDispatch()
-    const actions = companiesSlice.actions
-    const all_companies = useAppSelector(state => state.companiesSlice.companies)
+    const { data: all_companies } = CompaniesApi.useFetchAllCompaniesQuery(0)
     const [pageCount, setPageCount] = React.useState(0)
 
     const getQuery = React.useMemo(() => {
         let queryString = ''
-        all_companies?.slice(pageCount * 10, (pageCount + 1) * 10).forEach(company => {
-            queryString += company.symbol + ","
-        })
-        queryString = queryString.slice(0, -1)
+        if (all_companies) {
+            all_companies?.slice(pageCount * 10, (pageCount + 1) * 10).forEach(company => {
+                queryString += company.symbol + ","
+            })
+            queryString = queryString.slice(0, -1)
+        }
         return queryString
-    }, [pageCount])
+    }, [pageCount,all_companies])
 
-    const { data: company_data, error, isLoading } = CompaniesApi.useFetchCompanyStatsQuery(getQuery)
+    const { data: company_data } = CompaniesApi.useFetchCompanyStatsQuery(getQuery)
+
     const handleClick = (next: boolean) => {
         window.scrollTo(0, 0)
         if (next) {
@@ -39,16 +38,14 @@ export const Companies: React.FC = () => {
     }
 
     const companyClickHandle = (company_symbol: string) => {
-        dispatch(actions.setActiveCompany(company_symbol))
-        navigate("/company")
+        navigate("/company?symbol=" + company_symbol)
     }
 
-    if (!isLoading && company_data) {
+    if (company_data) {
         return (
             <div className={style.container}>
                 <CompaniesList
                     onCompanyClick={companyClickHandle}
-                    companies={all_companies?.slice(pageCount * 10, (pageCount + 1) * 10)}
                     companies_stats={company_data}
                 />
                 <div className={style.buttons_box}>

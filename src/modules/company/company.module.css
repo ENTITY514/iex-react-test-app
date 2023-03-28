@@ -1,6 +1,4 @@
 .container {
-    background-color: var(--bg-boxs-color);
-    box-shadow: var(--box-shadow-little);
     display: grid;
     padding: var(--standart-padding-max);
     width: 90%;
@@ -14,7 +12,7 @@
     height: 200px;
 }
 
-.box{
+.box {
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-gap: var(--standart-margin-max);
@@ -22,7 +20,7 @@
 
 
 @media (max-width: 500px) {
-    .box{
+    .box {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;

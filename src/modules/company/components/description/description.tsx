@@ -1,13 +1,15 @@
 import { CompaniesApi } from "../../../../services/CompaniesService"
-import { useAppSelector } from "../../../../store/hooks/redux"
 import { ImageUI } from "../../../../UI/Image/image"
 import { Loader } from "../../../../UI/loader/loader"
 import { Title } from "../../../../UI/title/title"
 import style from "./descrition.module.css"
 
-export const Description: React.FC = () => {
-    const state = useAppSelector(state => state.companiesSlice)
-    const { data: info, isLoading, error, refetch } = CompaniesApi.useFetchCompanyDataQuery(state.active_company)
+interface IDesciptionProps {
+    company_symbol: string
+}
+
+export const Description: React.FC<IDesciptionProps> = ({ company_symbol }) => {
+    const { data: info, isLoading, error, refetch } = CompaniesApi.useFetchCompanyDataQuery(company_symbol)
     if (info) {
         return (
             <div className={style.container}>

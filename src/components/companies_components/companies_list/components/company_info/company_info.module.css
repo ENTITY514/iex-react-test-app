@@ -23,18 +23,20 @@
 .small_container {
     width: 220px;
     display: grid;
+    height: 450px;
     grid-template-rows: 200px 1fr;
     grid-gap: var(--standart-margin-min);
     padding: var(--standart-padding-min);
     background: var(--bg-box-gradient);
     border-radius: var(--standart-border-radius-min);
-    box-shadow: var(--box-shadow-little);
-    margin: var(--standart-margin-max) auto;
-    transition: 0.1s;
+    box-shadow: var(--box-shadow-very-little);
+    margin: 40px auto;
+    transition: 0.3s;
 }
 
 .small_container:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-little);
 }
 
 @media (max-width: 600px) {
